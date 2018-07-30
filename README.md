@@ -1,2 +1,2 @@
-# tScripts
+#  tScripts
 a game script project
