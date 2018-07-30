@@ -28,7 +28,7 @@ class EXP_STORE(GameTask):
         pre_val = 0
         count = 0
         complete_count = 0
-        while complete_count < 1:
+        while complete_count < 3:
             img = game.screen_img(749, 155, 852, 230)
             origin_img = Image.open('origin_qianchen.png')
             same_value = image_same_val(img, origin_img)

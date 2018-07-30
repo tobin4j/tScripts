@@ -18,7 +18,7 @@ class SouChao(GameTask):
         print(self.task_name, "start...")
         pre_val = 0
         count = 0
-        complete_count = 2
+        complete_count = 0
         # 前置点击
         game.click(820, 563)
         sleep(Sleep.SHORT.value)

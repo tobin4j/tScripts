@@ -5,6 +5,9 @@ class GameTaskQueue(object):
     task_queue = Queue()
 
     def __init__(self):
+        # 询问任务结束是否需要发送邮件
+        # 加一个完成清单 ,发邮件过去
+        # 游戏任务类增加任务具体信息相关字段
         pass
 
     def put_task(self, game_task):

@@ -9,6 +9,8 @@ from common.scripts_common import Sleep, image_same_val
 # 力之境界
 class PowerRealm(GameTask):
 
+    task_name = '力之境界'
+
     def task_process(self):
         game = self.game_win
         game.click(820, 563)
