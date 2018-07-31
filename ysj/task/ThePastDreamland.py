@@ -41,10 +41,7 @@ class ThePastDreamland(LoopGameTask):
         sleep(Sleep.MIDDLE.value)
         game.draw(727, 450, 727, 30)
         sleep(Sleep.MIDDLE.value)
-        if role_type == 1:
-            game.click(727, 315)
-        else:
-            game.click(727, 430)
+        game.click(727, 430)
         game.click(800, 550)
         sleep(Sleep.LONG.value)
         game.continue_click()

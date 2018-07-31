@@ -29,6 +29,6 @@ class GameTaskQueue(object):
         for task in self.complete_task_list:
             content = content + "玩法名称:" + task.task_name + \
                       " 开始时间:" + get_str_datetime(task.start_time) + " 结束时间:" + \
-                      get_str_datetime(task.end_time) + "耗时:" + get_time_diff(task.end_time, task.start_time) + "秒\n"
+                      get_str_datetime(task.end_time) + " 耗时: " + get_time_diff(task.end_time, task.start_time) + "秒\n"
         title = "报告长官!任务完成!"
         send_mail(content, title=title)

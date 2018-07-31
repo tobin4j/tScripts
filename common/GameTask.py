@@ -8,7 +8,7 @@ class GameTask(object):
     start_time = None
     end_time = None
 
-    def __init__(self, game_win):
+    def __init__(self, game_win=None):
         self.game_win = game_win
 
     def start_task(self):
