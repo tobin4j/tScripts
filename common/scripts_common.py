@@ -1,7 +1,9 @@
+import datetime
 import operator
 import math
 from enum import Enum
 from functools import reduce
+import time
 
 
 # 判断两张图相似度
@@ -37,3 +39,19 @@ class Sleep(Enum):
     MIDDLE = 1
     MIDDLE_LONG = 3
     LONG = 5
+
+
+def get_str_time(tm=time.time()):
+    return time.strftime('%H:%M:%S', time.localtime(tm))
+
+
+def get_str_datetime(tm=time.time()):
+    return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(tm))
+
+
+def get_time_diff(end_tm, start_tm):
+    return str(int(end_tm - start_tm))
+
+
+if __name__ == '__main__':
+    print(type(time.time()))

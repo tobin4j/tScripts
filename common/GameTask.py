@@ -1,18 +1,23 @@
-import datetime
+import time
+
+from common.scripts_common import get_str_time, get_time_diff
 
 
 class GameTask(object):
     task_name = None
+    start_time = None
+    end_time = None
 
     def __init__(self, game_win):
         self.game_win = game_win
 
     def start_task(self):
         self.game_win.ret_home()
-        current_time = datetime.datetime.now()
+        self.start_time = time.time()
         print('--', self.task_name, '--', '开始')
         self.task_process()
-        print('--', self.task_name, '--', '已完成', '耗时:', str(datetime.datetime.now() - current_time))
+        self.end_time = time.time()
+        print('--', self.task_name, '--', '已完成', '耗时:', get_time_diff(self.end_time, self.start_time), "秒")
 
     def task_process(self):
         pass
