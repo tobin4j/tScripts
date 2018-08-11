@@ -24,8 +24,8 @@ class ThePastDreamland(LoopGameTask):
         # 前置点击
         game.click(820, 563)
         sleep(Sleep.SHORT.value)
-        game.draw(963, 265, 10, 265)
-        game.click(830, 280)
+        game.draw(963, 265,348, 265)
+        game.click(911, 280)
         if role_type in (1, 2, 3):
             role_pos_x = 280
         else:
