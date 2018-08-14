@@ -1,6 +1,7 @@
 # 游戏窗口类 所有 pos 都已左上为参照
 import win32gui
 
+import win32api
 import win32con
 import pyautogui as pag
 from PIL import ImageGrab
@@ -45,7 +46,15 @@ class GameWin(object):
     def click(self, x, y):
         x = self.left_px + x
         y = self.up_px + y
-        pag.click(x, y)
+        # pag.click(x, y)
+
+        pos = (x, y)
+        handle = win32gui.WindowFromPoint(pos)
+        client_pos = win32gui.ScreenToClient(handle, pos)
+        tmp = win32api.MAKELONG(client_pos[0], client_pos[1])
+        win32gui.SendMessage(handle, win32con.WM_ACTIVATE, win32con.WA_ACTIVE, 0)
+        win32gui.SendMessage(handle, win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, tmp)
+        win32gui.SendMessage(handle, win32con.WM_LBUTTONUP, win32con.MK_LBUTTON, tmp)
 
     # 游戏内点对点拖拽
     @init_pos

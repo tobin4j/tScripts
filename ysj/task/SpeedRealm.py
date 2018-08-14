@@ -43,7 +43,7 @@ class SpeedRealm(GameTask):
             pre_val = same_value
             if count > 2:
                 game.continue_click()
-            if same_value < 5:
+            if same_value < 11:
                 complete_count += 1
                 print("--疾之境界--已刷:", complete_count, "次")
                 game.continue_click()

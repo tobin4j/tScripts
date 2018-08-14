@@ -80,14 +80,13 @@ class YSJGame(GameWin, GameTaskQueue):
             self.put_task(EXP_STORE(self))
             self.put_task(COIN_STORE(self))
             self.put_task(PowerRealm(self))
-            self.put_task(SpeedRealm(self))
+            #self.put_task(SpeedRealm(self))
             self.put_task(AgileRealm(self))
-            #self.put_task(Fiesta(self))
             self.put_task(SouChao(self))
+            self.put_task(Fiesta(self))
         self.exec_task()
 
 
 if __name__ == "__main__":
     ysj_game = YSJGame()
     ysj_game.init_menu()
-
