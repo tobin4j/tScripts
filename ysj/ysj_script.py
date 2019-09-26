@@ -3,6 +3,7 @@ from common.GameTaskQueue import GameTaskQueue
 from common.GameWin import GameWin
 from common.scripts_common import *
 from ysj.task.AgileRealm import AgileRealm
+from ysj.task.COIN_STORE import COIN_STORE
 from ysj.task.EXP_STORE import *
 from ysj.task.PowerRealm import PowerRealm
 from ysj.task.SouChao import SouChao
@@ -62,6 +63,7 @@ class YSJGame(GameWin, GameTaskQueue):
     def init_menu(self):
         play_type = common_input_switch(self.get_play_type())
         if play_type == 1:
+            self.put_task(COIN_STORE(self))
             self.put_task(EXP_STORE(self))
             self.put_task(PowerRealm(self))
             self.put_task(SpeedRealm(self))
@@ -76,15 +78,15 @@ class YSJGame(GameWin, GameTaskQueue):
             self.put_task(XinHai(self))
         elif play_type == 6:
             self.put_task(EXP_STORE(self))
+            self.put_task(COIN_STORE(self))
             self.put_task(PowerRealm(self))
-            self.put_task(SpeedRealm(self))
+            #self.put_task(SpeedRealm(self))
             self.put_task(AgileRealm(self))
-            self.put_task(Fiesta(self))
             self.put_task(SouChao(self))
+            self.put_task(Fiesta(self))
         self.exec_task()
 
 
 if __name__ == "__main__":
     ysj_game = YSJGame()
     ysj_game.init_menu()
-

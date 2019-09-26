@@ -22,8 +22,8 @@ class SouChao(GameTask):
         # 前置点击
         game.click(820, 563)
         sleep(Sleep.SHORT.value)
-        game.draw(963, 265, 10, 265)
-        game.click(553, 276)
+        game.draw(963, 265, 614, 265)
+        game.click(911, 280)
         sleep(Sleep.SHORT.value)
         game.click(880, 537)
         sleep(Sleep.LONG.value)
@@ -40,7 +40,7 @@ class SouChao(GameTask):
             pre_val = same_value
             if count > 2:
                 game.continue_click()
-            if same_value < 5:
+            if same_value < 11:
                 complete_count += 1
                 print(self.task_name, "--已刷:", complete_count, "次")
                 game.continue_click()

@@ -6,9 +6,9 @@ from common.GameTask import GameTask
 from common.scripts_common import Sleep, image_same_val
 
 
-# 疾之境界
-class SpeedRealm(GameTask):
-    task_name = '疾之境界'
+# 金币宝库
+class COIN_STORE(GameTask):
+    task_name = '金币宝库'
 
     def task_process(self):
         game = self.game_win
@@ -16,11 +16,7 @@ class SpeedRealm(GameTask):
         sleep(Sleep.SHORT.value)
         game.click(120, 272)
         sleep(Sleep.MIDDLE.value)
-        # 冗余
-        game.draw(879, 319, 10, 319)
-        sleep(Sleep.SHORT.value)
-        game.click(813, 297)
-
+        game.click(441, 315)
         sleep(Sleep.MIDDLE.value)
         game.draw(707, 435, 707, 50)
         sleep(Sleep.MIDDLE.value)
@@ -45,7 +41,7 @@ class SpeedRealm(GameTask):
                 game.continue_click()
             if same_value < 11:
                 complete_count += 1
-                print("--疾之境界--已刷:", complete_count, "次")
+                print(self.task_name, "--已刷:", complete_count, "次")
                 game.continue_click()
                 sleep(Sleep.MIDDLE.value)
                 game.continue_click()

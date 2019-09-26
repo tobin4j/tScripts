@@ -32,7 +32,7 @@ class Fiesta(GameTask):
         pre_val = 0
         count = 0
         complete_count = 0
-        while complete_count < 15:
+        while complete_count < 30:
             img = game.screen_img(425, 182, 600, 197)
             origin_img = Image.open('origin_jidian.png')
             same_value = image_same_val(img, origin_img)
@@ -43,7 +43,7 @@ class Fiesta(GameTask):
             pre_val = same_value
             if count > 2:
                 game.continue_click()
-            if same_value < 5:
+            if same_value < 11:
                 complete_count += 1
                 print(self.task_name, "--已刷:", complete_count, "次")
                 game.continue_click()

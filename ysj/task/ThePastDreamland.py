@@ -24,8 +24,8 @@ class ThePastDreamland(LoopGameTask):
         # 前置点击
         game.click(820, 563)
         sleep(Sleep.SHORT.value)
-        game.draw(963, 265, 10, 265)
-        game.click(830, 280)
+        game.draw(963, 265,348, 265)
+        game.click(911, 280)
         if role_type in (1, 2, 3):
             role_pos_x = 280
         else:
@@ -57,7 +57,7 @@ class ThePastDreamland(LoopGameTask):
             pre_val = same_value
             if count > 3:
                 game.continue_click()
-            if same_value < 5:
+            if same_value < 11:
                 complete_count += 1
                 print("--前尘幻境--已刷:", complete_count, "次")
                 game.continue_click()
