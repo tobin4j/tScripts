@@ -28,7 +28,7 @@ def common_input_switch(dic):
                 print('输入错误..')
         except:
             print('输入错误..')
-    print('已选择:', dic[type_val])
+    #print('已选择:', dic[type_val])
     return type_val
 
 
@@ -36,7 +36,7 @@ def common_input_switch(dic):
 class Sleep(Enum):
     VERY_SHORT = 0.1
     SHORT = 0.5
-    MIDDLE = 1
+    MIDDLE = 1.1
     MIDDLE_LONG = 3
     LONG = 5
 
