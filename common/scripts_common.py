@@ -34,7 +34,7 @@ def common_input_switch(dic):
 
 # 通用睡眠时长
 class Sleep(Enum):
-    VERY_SHORT = 0.1
+    VERY_SHORT = 0.2
     SHORT = 0.5
     MIDDLE = 1.1
     MIDDLE_LONG = 3

@@ -1,8 +1,9 @@
 # 游戏窗口类 所有 pos 都已左上为参照
 import win32gui
-
+from common.scripts_common import *
 import win32api
 import win32con
+from time import sleep
 import pyautogui as pag
 from PIL import ImageGrab
 
@@ -64,7 +65,7 @@ class GameWin(object):
         x1 = x1 + self.left_px
         y1 = y1 + self.up_px
         pag.mouseDown(x, y)
-        pag.moveTo(x1, y1, 1)
+        pag.moveTo(x1, y1, 0.1)
         pag.mouseUp()
 
     # 游戏内点对点截图
